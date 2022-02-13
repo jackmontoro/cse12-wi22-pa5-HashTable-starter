@@ -1,5 +1,5 @@
 /**
- * TODO: Complete the solution for Course
+ * 
  */
 import java.util.ArrayList;
 import java.util.Collections;
@@ -50,6 +50,7 @@ public class Course {
         }
 
         if(this.getEnrolledCount() < capacity && !enrolled.contains(student)){
+            enrolled.add(student);
             return true;
         }
         return false;
@@ -71,6 +72,9 @@ public class Course {
     }
 
     public boolean isFull() {
+        if(this.enrolled.size() == capacity){
+            return true;
+        }
         return false;
     }
 
@@ -98,7 +102,7 @@ public class Course {
     }
 
     public String toString() {
-        return this.getDepartment()+this.getNumber()+
+        return this.getDepartment()+" "+this.getNumber()+" "+
             "["+this.getCapacity()+"]"+"\n"+this.getDescription();
     }
 }
