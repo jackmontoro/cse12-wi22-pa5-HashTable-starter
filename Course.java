@@ -1,11 +1,21 @@
 /**
- * 
+ * Name: Jack Montoro
+ * Email: jmontoro@ucsd.edu
+ * PID: A17152600
+ * File Description: This class implements the Course object
+ * with class variables: enrolled, capacity, department, number, and description
  */
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
+/**
+ * This class represents a university course as an Object through the 
+ * implementation of the Course class. Course has the class variables:
+ * (HashSet<Student>)enrolled, (private final) (int) capacity,
+ * (Strings) department, number, description
+ */
 public class Course {
     HashSet<Student> enrolled;
     private final int capacity;

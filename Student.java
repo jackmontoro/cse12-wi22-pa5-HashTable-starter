@@ -1,8 +1,15 @@
 /**
- * 
+ * Name: Jack Montoro
+ * Email: jmontoro@ucsd.edu
+ * PID: A17152600
+ * File Description: This class implements the Student Object 
  */
 import java.util.Objects;
 
+/**
+ * This class implements the Student object with
+ * class variables(String) firstName, lastName, and PID
+ */
 public class Student implements Comparable<Student> {
     private final String firstName;
     private final String lastName;

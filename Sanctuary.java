@@ -1,9 +1,17 @@
 /**
- * 
+ * Name: Jack Montoro
+ * Email: jmontoro@ucsd.edu
+ * PID: A17152600
+ * File Description: This class implements the Sanctuary Object
  */
 import java.util.HashMap;
 import java.util.Set;
 
+/**
+ * This Object class replicates an animal sanctuary
+ * by implementing class Sanctuary with class variables:
+ * sanctuary(HashMap<String,Integer>),(ints)maxAnimals and maxSpecies
+ */
 public class Sanctuary {
     
     HashMap<String, Integer> sanctuary;
