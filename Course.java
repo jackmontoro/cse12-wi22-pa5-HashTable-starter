@@ -32,6 +32,7 @@ public class Course {
                 throw new IllegalArgumentException();
             }
 
+            this.enrolled = new HashSet<Student>();
             this.department = department;
             this.number = number;
             this.description = description;
