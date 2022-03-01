@@ -19,6 +19,11 @@ public class Sanctuary {
     int maxSpecies;
     final int CAN_RESCUE_ALL = 0;
 
+    /**
+     * Constructor that creates a Sanctuary Object
+     * @param maxAnimals int assigned to class variable maxAnimals
+     * @param maxSpecies int assigned to class variable maxSpecies
+     */
     public Sanctuary(int maxAnimals, int maxSpecies) {
         if(maxAnimals<0||maxSpecies<0){
             throw new IllegalArgumentException();
@@ -29,6 +34,10 @@ public class Sanctuary {
         this.maxSpecies = maxSpecies;
     }
 
+    /**
+     * gets number of animals from a species in a Sanctuary
+     * @return number of animals from a particular species
+     */
     public int getNum(String species) {
         if(species == null){
             throw new IllegalArgumentException();
@@ -40,6 +49,10 @@ public class Sanctuary {
         return 0;
     }
     
+    /**
+     * gets total number of animals in a Sanctuary
+     * @return number of animals in Sanctuary
+     */
     public int getTotalAnimals() {
         int sum = 0;
         for (int x : sanctuary.values()){
@@ -49,10 +62,20 @@ public class Sanctuary {
         return sum;
     }
     
+    /**
+     * gets total number of species in a Sanctuary
+     * @return number of species in Sanctuary
+     */
     public int getTotalSpecies() {
         return sanctuary.size();
     }
 
+    /**
+     * adds num amount of animals to species in Sanctuary
+     * @param species species to be rescued
+     * @param num number of animals to be rescued
+     * @return animals that cannot be rescued if capacity exceeded
+     */
     public int rescue(String species, int num) {
         if(num <= 0||species == null){
             throw new IllegalArgumentException();
@@ -81,6 +104,11 @@ public class Sanctuary {
         }
     }
 
+    /**
+     * subtracts num amount of animals to species in Sanctuary
+     * @param species species to be released
+     * @param num number of animals to be released
+     */
     public void release(String species, int num) {
         if(species == null||!this.sanctuary.containsKey(species)){
             throw new IllegalArgumentException();
